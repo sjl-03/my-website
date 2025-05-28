@@ -14,7 +14,7 @@ const material = new THREE.MeshLambertMaterial({color: '#468585', emissive: '#46
 const dodecahedron = new THREE.Mesh(geometry, material);
 
 const boxGeometry = new THREE.BoxGeometry(2, 0.1, 2);
-const boxMaterial = new THREE.MeshBasicMaterial({color: '#B4B4B3'});
+const boxMaterial = new THREE.MeshStandardMaterial({color: '#B4B4B3', emissive: '#B4B4B3'});
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 box.position.y = -1.5;
 
@@ -49,5 +49,12 @@ function animate(){
   controls.update();
   renderer.render(scene,camera);
 }
+
+// 8. Handle window resizing
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+})
 
 animate();
