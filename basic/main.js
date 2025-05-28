@@ -1,4 +1,4 @@
-// Run python3 -m http.server 8000 to view
+// Run cd basic && python3 -m http.server 8000
 
 import * as THREE from 'three';
 
