@@ -1,0 +1,13 @@
+create a folder e.g. vite-react
+cd into that folder
+run: npm create vite@latest
+◇  Project name:
+│  ./
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+
+run: npm i three @react-three/fiber @react-three/drei
