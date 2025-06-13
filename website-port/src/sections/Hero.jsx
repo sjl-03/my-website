@@ -1,3 +1,6 @@
+import { Canvas } from "@react-three/fiber";
+import { PerspectiveCamera } from "@react-three/drei";
+
 const Hero = () => {
   return (
     <section className="min-h-screen border-2 w-full flex flex-col relative">
@@ -7,7 +10,9 @@ const Hero = () => {
         </div>
 
         <div className="w-full h-full absolute inset-0">
-            
+            <Canvas className="w-full h-full">
+                <PerspectiveCamera makeDefault position={[0,0,30]}/>
+            </Canvas>
         </div>
     </section>
   )
