@@ -14,6 +14,11 @@ const HackerRoom = (props) => {
 
   return (
     <group {...props} dispose={null}>
+      {/* Add ambient light */}
+      <ambientLight intensity={0.5} />
+      {/* Add directional light */}
+      <directionalLight position={[5, 5, 5]} intensity={1} />
+      
       <mesh geometry={nodes.screen_screens_0.geometry} material={materials.screens}>
         <meshMatcapMaterial map={screenTxt} />
       </mesh>
@@ -37,6 +42,6 @@ const HackerRoom = (props) => {
     </group>
   );
 }
-export default HackerRoom;
 
 useGLTF.preload('/models/hacker-room.glb');
+export default HackerRoom;
